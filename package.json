@@ -1,0 +1,28 @@
+{
+  "name": "bg-lexicon-normalizer",
+  "version": "0.1.0",
+  "description": "Offline Bulgarian lexicon normalizer for translated biblical dictionaries.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "bin": {
+    "bg-lexicon-normalizer": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "normalize": "node dist/cli.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

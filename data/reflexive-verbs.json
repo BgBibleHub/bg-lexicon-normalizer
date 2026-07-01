@@ -1,0 +1,30 @@
+[
+  {
+    "canonical": "отклонявам се",
+    "patterns": [
+      "да се отклони",
+      "да се отклоня"
+    ],
+    "category": "verb",
+    "type": "reflexive",
+    "confidence": 1
+  },
+  {
+    "canonical": "радвам се",
+    "patterns": [
+      "да се радвам"
+    ],
+    "category": "verb",
+    "type": "reflexive",
+    "confidence": 1
+  },
+  {
+    "canonical": "боря се",
+    "patterns": [
+      "да се боря"
+    ],
+    "category": "verb",
+    "type": "reflexive",
+    "confidence": 1
+  }
+]

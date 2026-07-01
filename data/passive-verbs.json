@@ -1,0 +1,21 @@
+[
+  {
+    "canonical": "унищожен съм",
+    "patterns": [
+      "да бъде унищожен",
+      "да бъда унищожен"
+    ],
+    "category": "verb",
+    "type": "passive",
+    "confidence": 1
+  },
+  {
+    "canonical": "невеж съм",
+    "patterns": [
+      "да бъда невеж"
+    ],
+    "category": "verb",
+    "type": "passive",
+    "confidence": 1
+  }
+]

@@ -1,0 +1,94 @@
+[
+  {
+    "canonical": "загивам",
+    "patterns": [
+      "да загине",
+      "да погине",
+      "да бъде изгубен"
+    ],
+    "category": "verb",
+    "type": "active",
+    "confidence": 1
+  },
+  {
+    "canonical": "изчезвам",
+    "patterns": [
+      "да изчезне"
+    ],
+    "category": "verb",
+    "type": "active",
+    "confidence": 1
+  },
+  {
+    "canonical": "правя добро",
+    "patterns": [
+      "да правиш добро"
+    ],
+    "category": "verb",
+    "type": "active",
+    "confidence": 1
+  },
+  {
+    "canonical": "обичам",
+    "patterns": [
+      "да обичаш"
+    ],
+    "category": "verb",
+    "type": "active",
+    "confidence": 1
+  },
+  {
+    "canonical": "купувам",
+    "patterns": [
+      "да купя"
+    ],
+    "category": "verb",
+    "type": "active",
+    "confidence": 1
+  },
+  {
+    "canonical": "умирам",
+    "patterns": [
+      "да умра"
+    ],
+    "category": "verb",
+    "type": "active",
+    "confidence": 1
+  },
+  {
+    "canonical": "виждам",
+    "patterns": [
+      "да видя"
+    ],
+    "category": "verb",
+    "type": "active",
+    "confidence": 1
+  },
+  {
+    "canonical": "казвам",
+    "patterns": [
+      "да кажа"
+    ],
+    "category": "verb",
+    "type": "active",
+    "confidence": 1
+  },
+  {
+    "canonical": "вземам",
+    "patterns": [
+      "да взема"
+    ],
+    "category": "verb",
+    "type": "active",
+    "confidence": 1
+  },
+  {
+    "canonical": "давам",
+    "patterns": [
+      "да дам"
+    ],
+    "category": "verb",
+    "type": "active",
+    "confidence": 1
+  }
+]

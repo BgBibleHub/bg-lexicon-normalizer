@@ -1,0 +1,20 @@
+[
+  {
+    "canonical": "завет",
+    "patterns": [
+      "договор",
+      "съюз",
+      "споразумение"
+    ],
+    "category": "theological-term",
+    "notes": "За гр. διαθήκη и евр. berith в библейски контекст."
+  },
+  {
+    "canonical": "праведност",
+    "patterns": [
+      "справедливост",
+      "правота"
+    ],
+    "category": "theological-term"
+  }
+]
