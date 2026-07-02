@@ -1,5 +1,6 @@
 export { readDocx } from "./docx/readDocx.js";
 export { writeDocx, transformDocumentXml } from "./docx/writeDocx.js";
+export { groupCandidates, runCurationSession, suggestCanonical } from "./curation/curateCandidates.js";
 export { normalizeDefinition } from "./normalizers/normalizeDefinition.js";
 export { normalizeGloss } from "./normalizers/normalizeGloss.js";
 export { normalizeTerminology } from "./normalizers/normalizeTerminology.js";
@@ -27,5 +28,6 @@ export type {
   ReviewCandidate,
   VerbRuleType
 } from "./rules/types.js";
+export type { CandidateGroup, CurationAction, CurationDecision, CurationLogEntry, CurationResult } from "./curation/types.js";
 export type { VerbNormalizer } from "./normalizers/normalizeVerb.js";
 export type { ProfileNormalizers, SourceProfile, SourceProfileName, SourceProfileOptionName } from "./profiles/sourceProfile.js";
