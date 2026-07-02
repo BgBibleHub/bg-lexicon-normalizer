@@ -1,0 +1,657 @@
+[
+  {
+    "timestamp": "2026-07-02T10:08:04.937Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да блести",
+    "classifierType": "simple-infinitive",
+    "frequency": 23,
+    "action": "edit",
+    "canonical": "блестя",
+    "targetRuleFile": "verbs.json",
+    "rule": {
+      "canonical": "блестя",
+      "patterns": [
+        "да блести"
+      ],
+      "category": "verb",
+      "type": "active",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "да направиш да се покаже червено1c; 2) да блести1c; 3) да излъчваш (показваш) червенина1",
+      "да блести",
+      "(Hiphil) да бъде ясен, да блести",
+      "1) да бъда или да стана светлина, да блести1a) (Qal)1a1) да стана светлина (ден)1a;",
+      "да блести"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да режа",
+    "classifierType": "simple-infinitive",
+    "frequency": 23,
+    "action": "accept",
+    "canonical": "режа",
+    "targetRuleFile": "verbs.json",
+    "rule": {
+      "canonical": "режа",
+      "patterns": [
+        "да режа"
+      ],
+      "category": "verb",
+      "type": "active",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "да режа",
+      "(Piel) да режа, нарязвам, отрязвам, съкращавам",
+      "да режа",
+      "да режа",
+      "1) да режа, да дялам, да сека, да отсека, да отсек"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да бъдеш или да",
+    "classifierType": "complex-phrase",
+    "frequency": 19,
+    "action": "reject",
+    "sampleContexts": [
+      "лаб1a; 2) да се отпускаш1b) (Pulal)1b1) да бъдеш или да отслабваш1b; 2) да се отпускаш",
+      "извърши престъпление, да навреди1a; 2) да бъдеш или да станеш виновен1a; 3) да бъдеш признат з",
+      "1) да бъдеш или да ставаш остър1a) (Qal) да ставаш остър1b",
+      "1) да бъдеш мъдър; 1а) (Qal) да бъдеш или да станеш мъдър, да действаш мъдро; 1б) (",
+      ": слаб/инвалид1) да бъдеш или да станеш слаб, да бъдеш или да се разболе"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да треперя",
+    "classifierType": "simple-infinitive",
+    "frequency": 19,
+    "action": "accept",
+    "canonical": "треперя",
+    "targetRuleFile": "verbs.json",
+    "rule": {
+      "canonical": "треперя",
+      "patterns": [
+        "да треперя"
+      ],
+      "category": "verb",
+      "type": "active",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "да треперя",
+      "да треперя",
+      "1) (Qal) да се разтърся, да треперя, да се разтърся1a) (Niphal) да се разтъ",
+      "да треперя",
+      "ещ (с подготовка)1b) (Hiphil)1b1) карам да треперя1b; 2) плаша, разгромявам (армия)"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да водя",
+    "classifierType": "simple-infinitive",
+    "frequency": 16,
+    "action": "accept",
+    "canonical": "водя",
+    "targetRuleFile": "verbs.json",
+    "rule": {
+      "canonical": "водя",
+      "patterns": [
+        "да водя"
+      ],
+      "category": "verb",
+      "type": "active",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "1) да вървя направо, да напредвам1b; 2) да водя (причинител)1b; 3) да оправям, изправям",
+      "сявам1c; 2) да се разхождам1d) (Niphal) да водя, да доведа, да отведа, да нося, да кара",
+      "1) да доведа, да водя, да нося, да провеждам, да търпя1a) (Hi",
+      "вея, начин на живот (фиг.) 1b) (Hiphil) да водя, да доведа, да отведа, да нося, да кара",
+      "о, да правя гладък, да правя прав1b; 2) да водя, насочвам, да водя право напред1b; 3) д"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да живея",
+    "classifierType": "simple-infinitive",
+    "frequency": 16,
+    "action": "accept",
+    "canonical": "живея",
+    "targetRuleFile": "verbs.json",
+    "rule": {
+      "canonical": "живея",
+      "patterns": [
+        "да живея"
+      ],
+      "category": "verb",
+      "type": "active",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "да живея",
+      "да живея",
+      "(P'al) да живеяАрамейски от dur (דּוּר да живея H1752)",
+      "да се движа, да си отивам1a; 2) умирам, да живея, начин на живот (фиг.)1b) (Piel)1b1) да",
+      "1) да живея ; 1а) (P'al) да живея ; 1б) (Aphel) д"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да плача",
+    "classifierType": "simple-infinitive",
+    "frequency": 16,
+    "action": "accept",
+    "canonical": "плача",
+    "targetRuleFile": "verbs.json",
+    "rule": {
+      "canonical": "плача",
+      "patterns": [
+        "да плача"
+      ],
+      "category": "verb",
+      "type": "active",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "1) да плача, да стена1a) (Qal) да плача, да оплаква",
+      "да плача",
+      "1) да плача, да оплаквам, да викам, да проливам съл",
+      "да плача",
+      "(Qal) да плача"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да тече",
+    "classifierType": "simple-infinitive",
+    "frequency": 16,
+    "action": "edit",
+    "canonical": "тека",
+    "targetRuleFile": "verbs.json",
+    "rule": {
+      "canonical": "тека",
+      "patterns": [
+        "да тече"
+      ],
+      "category": "verb",
+      "type": "active",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "да тече: течещ",
+      "1a; 2) да умирам, да чезне (фиг.)1a; 3) да тече (за издаване от жена), да имам проблем,",
+      "да тече",
+      "(Нифал) да тече, да тича",
+      "да тече"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да изгоря",
+    "classifierType": "simple-infinitive",
+    "frequency": 15,
+    "action": "skip",
+    "sampleContexts": [
+      "да изгоря: изгоря",
+      "да изгоря",
+      "да изгоря",
+      "да изгоря",
+      "да изгоря"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да викам",
+    "classifierType": "simple-infinitive",
+    "frequency": 14,
+    "action": "accept",
+    "canonical": "викам",
+    "targetRuleFile": "verbs.json",
+    "rule": {
+      "canonical": "викам",
+      "patterns": [
+        "да викам"
+      ],
+      "category": "verb",
+      "type": "active",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "1) да плача, да оплаквам, да викам, да проливам сълзи1a) (Qal)1a1) да плач",
+      "1) да плача, да викам, да викам, да викам за помощ1a) (Qal)1a",
+      "(P'al) да плача, да викам, да викамАрамейски от za.aq (זָעַק да в",
+      "отговарям, да свидетелствам, да говоря, да викам1a) (Qal)1a1) да отговарям, да отговарям",
+      "(Qal) да стена, да викам, да крещим"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да смачкам",
+    "classifierType": "simple-infinitive",
+    "frequency": 14,
+    "action": "skip",
+    "sampleContexts": [
+      "1a) (Qal) да бъде смачкан 1b) (Hiphil) да смачкам, счупя (зъбите)",
+      "да смачкам",
+      "1) да смачкам, да бъда смачкан, да се разкайвам, да б",
+      "да смачкам",
+      "1) да смачкам, да бъда смачкан, да се разкайвам, да б"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да унищожа",
+    "classifierType": "simple-infinitive",
+    "frequency": 14,
+    "action": "skip",
+    "sampleContexts": [
+      "да унищожа",
+      "да унищожа",
+      "да унищожа",
+      "да унищожа",
+      "да унищожа"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да бягам",
+    "classifierType": "simple-infinitive",
+    "frequency": 13,
+    "action": "accept",
+    "canonical": "бягам",
+    "targetRuleFile": "verbs.json",
+    "rule": {
+      "canonical": "бягам",
+      "patterns": [
+        "да бягам"
+      ],
+      "category": "verb",
+      "type": "active",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "да бягам",
+      ") да говоря; 1е) (Hiphil) да отвеждам, да бягам",
+      "да бягам",
+      "да бягам",
+      "да бягам"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да гледам",
+    "classifierType": "simple-infinitive",
+    "frequency": 13,
+    "action": "accept",
+    "canonical": "гледам",
+    "targetRuleFile": "verbs.json",
+    "rule": {
+      "canonical": "гледам",
+      "patterns": [
+        "да гледам"
+      ],
+      "category": "verb",
+      "type": "active",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "да гледам",
+      "1) да гледам, съзерцавам1a) (Qal) гледан, забележим",
+      "да гледам",
+      "1) да гледам, да разглеждам1a) (Piel) да гледам1b) (",
+      "да гледам"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да затворя",
+    "classifierType": "simple-infinitive",
+    "frequency": 13,
+    "action": "skip",
+    "sampleContexts": [
+      "да затворя",
+      "да затворя",
+      "да затворя",
+      ", смачквам, натискам надолу и навън 1a) да затворя (на рана)",
+      "да затворя"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да отрежа",
+    "classifierType": "simple-infinitive",
+    "frequency": 13,
+    "action": "skip",
+    "sampleContexts": [
+      "да отрежа",
+      "да отрежа",
+      "1) да отрежа, отсека, откъсна1a) (Qal) този, който е",
+      "да отрежа",
+      "1) да отрежа, отсека 1a) (Нифал) да бъде отсечен (ун"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да покрия",
+    "classifierType": "simple-infinitive",
+    "frequency": 13,
+    "action": "skip",
+    "sampleContexts": [
+      "(Piel) да покрия, да направя тайно",
+      "да покрия",
+      "да покрия",
+      "да покрия",
+      "щожен съм, да бъда отсечен; 1б) (Пиел) да покрия, скрия; 1в) (Хифил)1в1) да скрия1в; 2)"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да се счупи",
+    "classifierType": "simple-infinitive",
+    "frequency": 13,
+    "action": "skip",
+    "sampleContexts": [
+      "да се счупи",
+      "да се счупи",
+      "да се счупи",
+      "да се счупи",
+      "1) да се счупи, да се разбие, да избухне ; 1а) (Нифал"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да се поклонят на изваяния",
+    "classifierType": "complex-phrase",
+    "frequency": 12,
+    "action": "reject",
+    "sampleContexts": [
+      "върлени в огнената пещ, защото отказаха да се поклонят на изваяния образ на Навуходоносор и които бяха спа",
+      "върлени в огнената пещ, защото отказаха да се поклонят на изваяния образ на Навуходоносор и които бяха спа",
+      "върлени в огнената пещ, защото отказаха да се поклонят на изваяния идол на Навуходоносор и които бяха спас",
+      "върлени в огнената пещ, защото отказаха да се поклонят на изваяния образ на Навуходоносор и които бяха спа",
+      "върлени в огнената пещ, защото отказаха да се поклонят на изваяния образ на Навуходоносор и които бяха спа"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да отида",
+    "classifierType": "simple-infinitive",
+    "frequency": 12,
+    "action": "edit",
+    "canonical": "отивам",
+    "targetRuleFile": "verbs.json",
+    "rule": {
+      "canonical": "отивам",
+      "patterns": [
+        "да отида"
+      ],
+      "category": "verb",
+      "type": "active",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "1) да отида, да замина, да обикалям; 1а) (Qal)1a1)",
+      "да отида",
+      "1) да отида, да замина 1a) (P'al) да отида, да зами",
+      "да отида",
+      "(P'al) да отида, да дойда, да ходя, да бъда доведен ара"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да се осквернят",
+    "classifierType": "simple-infinitive",
+    "frequency": 12,
+    "action": "skip",
+    "sampleContexts": [
+      "риятели, които заедно с Даниил отказаха да се осквернят, като ядат храна от царската трапеза, к",
+      "риятели, които заедно с Даниил отказаха да се осквернят, като ядат храна от царската трапеза, к",
+      "риятели, които заедно с Даниил отказаха да се осквернят, като ядат храна от царската трапеза, к",
+      "риятели, които заедно с Даниил отказаха да се осквернят, като ядат храна от царската трапеза, к",
+      "риятели, които заедно с Даниил отказаха да се осквернят, като ядат храна от царската трапеза, к"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.941Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да се подигравам",
+    "classifierType": "simple-infinitive",
+    "frequency": 12,
+    "action": "reflexive",
+    "canonical": "подигравам се",
+    "targetRuleFile": "reflexive-verbs.json",
+    "rule": {
+      "canonical": "подигравам се",
+      "patterns": [
+        "да се подигравам"
+      ],
+      "category": "verb",
+      "type": "reflexive",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "да се подигравам",
+      "(Piel) да се подигравам",
+      "да се подигравам",
+      "да се подигравам",
+      "да се подигравам"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.942Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да се поклоня",
+    "classifierType": "simple-infinitive",
+    "frequency": 12,
+    "action": "reflexive",
+    "canonical": "покланям се",
+    "targetRuleFile": "reflexive-verbs.json",
+    "rule": {
+      "canonical": "покланям се",
+      "patterns": [
+        "да се поклоня"
+      ],
+      "category": "verb",
+      "type": "reflexive",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "да се поклоня",
+      "навеждам, прекланям се ; 1б) (Niphal) да се поклоня",
+      "да се поклоня",
+      "да се поклоня",
+      "(Qal) да се поклоня (в поклонение)Арамейски еквивалент: se."
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.942Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да се разпространява",
+    "classifierType": "simple-infinitive",
+    "frequency": 12,
+    "action": "reflexive",
+    "canonical": "разпространявам се",
+    "targetRuleFile": "reflexive-verbs.json",
+    "rule": {
+      "canonical": "разпространявам се",
+      "patterns": [
+        "да се разпространява"
+      ],
+      "category": "verb",
+      "type": "reflexive",
+      "scope": [
+        "gloss",
+        "definition",
+        "lexical"
+      ],
+      "status": "approved",
+      "sources": [
+        "curation"
+      ],
+      "confidence": 1
+    },
+    "sampleContexts": [
+      "да се разпространява",
+      "(Qal) да се разпространява",
+      "да се разпространява",
+      "н, да бъда хлабав1b; 3) да бъда пуснат, да се разпространява; 1в) (Pual) да бъда изоставен, да бъда",
+      "олзвам насилие1a; 9) да се пръсна 1a10) да се разпространява, да разпространява1b) (Niphal) да бъде"
+    ]
+  },
+  {
+    "timestamp": "2026-07-02T10:08:04.942Z",
+    "inputCandidateFile": "/Volumes/ExHD/Software/bg-lexicon-normalizer/output/step-minimal-run/review-candidates.json",
+    "candidate": "да се събера",
+    "classifierType": "simple-infinitive",
+    "frequency": 12,
+    "action": "skip",
+    "sampleContexts": [
+      "да се събера",
+      "да се събера",
+      "да се събера",
+      "да се събера",
+      "да се събера"
+    ]
+  }
+]

@@ -26,5 +26,59 @@
     "category": "verb",
     "type": "reflexive",
     "confidence": 1
+  },
+  {
+    "canonical": "подигравам се",
+    "patterns": [
+      "да се подигравам"
+    ],
+    "category": "verb",
+    "type": "reflexive",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "покланям се",
+    "patterns": [
+      "да се поклоня"
+    ],
+    "category": "verb",
+    "type": "reflexive",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "разпространявам се",
+    "patterns": [
+      "да се разпространява"
+    ],
+    "category": "verb",
+    "type": "reflexive",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
   }
 ]

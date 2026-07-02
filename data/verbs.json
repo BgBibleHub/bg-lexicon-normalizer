@@ -90,5 +90,203 @@
     "category": "verb",
     "type": "active",
     "confidence": 1
+  },
+  {
+    "canonical": "блестя",
+    "patterns": [
+      "да блести"
+    ],
+    "category": "verb",
+    "type": "active",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "режа",
+    "patterns": [
+      "да режа"
+    ],
+    "category": "verb",
+    "type": "active",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "треперя",
+    "patterns": [
+      "да треперя"
+    ],
+    "category": "verb",
+    "type": "active",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "водя",
+    "patterns": [
+      "да водя"
+    ],
+    "category": "verb",
+    "type": "active",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "живея",
+    "patterns": [
+      "да живея"
+    ],
+    "category": "verb",
+    "type": "active",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "плача",
+    "patterns": [
+      "да плача"
+    ],
+    "category": "verb",
+    "type": "active",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "тека",
+    "patterns": [
+      "да тече"
+    ],
+    "category": "verb",
+    "type": "active",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "викам",
+    "patterns": [
+      "да викам"
+    ],
+    "category": "verb",
+    "type": "active",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "бягам",
+    "patterns": [
+      "да бягам"
+    ],
+    "category": "verb",
+    "type": "active",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "гледам",
+    "patterns": [
+      "да гледам"
+    ],
+    "category": "verb",
+    "type": "active",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
+  },
+  {
+    "canonical": "отивам",
+    "patterns": [
+      "да отида"
+    ],
+    "category": "verb",
+    "type": "active",
+    "scope": [
+      "gloss",
+      "definition",
+      "lexical"
+    ],
+    "status": "approved",
+    "sources": [
+      "curation"
+    ],
+    "confidence": 1
   }
 ]
