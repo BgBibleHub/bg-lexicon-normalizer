@@ -7,6 +7,7 @@ import { writeDocx } from "./docx/writeDocx.js";
 import { normalizeDefinition } from "./normalizers/normalizeDefinition.js";
 import { normalizeGloss } from "./normalizers/normalizeGloss.js";
 import { createVerbNormalizer } from "./normalizers/normalizeVerb.js";
+import { resolveSourceProfile } from "./profiles/sourceProfile.js";
 import { generateReport } from "./reports/generateReport.js";
 import { loadAllRules } from "./rules/loadRules.js";
 import type { ReviewCandidate } from "./rules/types.js";
@@ -30,6 +31,7 @@ export async function main(argv = process.argv.slice(2)): Promise<void> {
   }
 
   const outDir = readOption(argv, "--out-dir") ?? "output";
+  const profileOption = readOption(argv, "--profile");
   const inputPath = path.resolve(inputArg);
   const outputDir = path.resolve(outDir);
   const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -41,12 +43,13 @@ export async function main(argv = process.argv.slice(2)): Promise<void> {
 
   const outputDocx = path.join(outputDir, `${path.basename(inputPath, path.extname(inputPath))}.normalized.docx`);
   const docx = await readDocx(inputPath);
+  const profile = resolveSourceProfile(profileOption, docx.documentXml);
   const writeResult = await writeDocx(docx, outputDocx, (text, context) => {
-    if (context.section === "G") {
-      return normalizeGloss(text, verbNormalizer, context);
-    }
-
-    return normalizeDefinition(text, verbNormalizer, context);
+    return profile.normalizeParagraph(text, context, {
+      gloss: (value, normalizationContext) => normalizeGloss(value, verbNormalizer, normalizationContext),
+      definition: (value, normalizationContext) => normalizeDefinition(value, verbNormalizer, normalizationContext),
+      lexical: (value, normalizationContext) => normalizeDefinition(value, verbNormalizer, normalizationContext)
+    });
   });
 
   const changes = sortChanges(writeResult.changes);
@@ -74,6 +77,7 @@ export async function main(argv = process.argv.slice(2)): Promise<void> {
   ]);
 
   console.log(`Normalized DOCX: ${outputDocx}`);
+  console.log(`Profile: ${profile.name}`);
   console.log(`Changes: ${writeResult.changes.length}`);
   console.log(`Review candidates: ${reviewCandidates.length}`);
 }
@@ -89,19 +93,32 @@ function readOption(argv: string[], name: string): string | undefined {
 
 function dedupeReviewCandidates(candidates: ReviewCandidate[]): ReviewCandidate[] {
   const seen = new Set<string>();
+  const frequencies = countReviewCandidateFrequencies(candidates);
   const result: ReviewCandidate[] = [];
 
   for (const candidate of candidates) {
-    const key = [candidate.entryId ?? "", candidate.section ?? "", candidate.candidate.toLocaleLowerCase("bg-BG")].join("|");
+    const candidateKey = candidate.candidate.toLocaleLowerCase("bg-BG").replace(/\s+/g, " ").trim();
+    const key = [candidate.entryId ?? "", candidate.section ?? "", candidateKey, candidate.classifierType].join("|");
     if (seen.has(key)) {
       continue;
     }
 
     seen.add(key);
-    result.push(candidate);
+    result.push({ ...candidate, frequency: frequencies.get(candidateKey) ?? 1 });
   }
 
   return result;
+}
+
+function countReviewCandidateFrequencies(candidates: ReviewCandidate[]): Map<string, number> {
+  const frequencies = new Map<string, number>();
+
+  for (const candidate of candidates) {
+    const key = candidate.candidate.toLocaleLowerCase("bg-BG").replace(/\s+/g, " ").trim();
+    frequencies.set(key, (frequencies.get(key) ?? 0) + 1);
+  }
+
+  return frequencies;
 }
 
 function sortChanges<T extends { entryId?: string; section?: string; offset: number }>(changes: T[]): T[] {
@@ -128,6 +145,9 @@ function printUsage(): void {
 Usage:
   npm run normalize input.docx
   npm run normalize input.docx -- --out-dir output
+  npm run normalize input.docx -- --profile auto
+  npm run normalize input.docx -- --profile step-minimal
+  npm run normalize input.docx -- --profile leh-inline
 
 This tool is offline and applies only local JSON normalization rules.`);
 }

@@ -1,4 +1,6 @@
 export type VerbRuleType = "active" | "reflexive" | "passive";
+export type RuleScope = "gloss" | "definition" | "lexical";
+export type VerbCandidateType = "simple-infinitive" | "passive" | "complex-phrase";
 
 export interface NormalizationRule {
   canonical: string;
@@ -10,6 +12,7 @@ export interface NormalizationRule {
   status?: string;
   sources?: string[];
   schemaVersion?: string | number;
+  scope?: RuleScope[];
 }
 
 export interface LoadedRules {
@@ -49,6 +52,8 @@ export interface ChangeRecord extends NormalizationContext {
 
 export interface ReviewCandidate extends NormalizationContext {
   candidate: string;
+  classifierType: VerbCandidateType;
+  frequency?: number;
   reason: string;
   offset: number;
   context: string;

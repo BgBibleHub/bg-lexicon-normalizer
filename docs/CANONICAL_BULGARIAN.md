@@ -30,6 +30,15 @@ If a phrase is not present in `patterns`, v0.1 does not guess a canonical form.
 
 ## Canonical Verb Forms
 
+Bulgarian infinitive-like forms of the shape `да + verb` are not acceptable as
+canonical lexicon glosses or definition items. They should be normalized in both
+gloss and definition contexts when an explicit rule exists.
+
+The exception is explanatory prose: if `да` is grammatically required inside a
+full sentence, quotation, or explanatory note, the engine should not invent a
+replacement. Such phrases should remain unchanged unless a human-approved rule
+lists the exact pattern.
+
 For active verbs, the canonical form is normally the Bulgarian dictionary-style
 imperfective first-person singular form where that is the approved editorial
 choice.

@@ -34,6 +34,21 @@ The loader should validate that each rule has:
 - a non-empty `category` string;
 - optional metadata such as `type`, `confidence`, and `notes`.
 
+Verb rules may also include optional `scope` metadata:
+
+```json
+{
+  "canonical": "загивам",
+  "patterns": ["да загине"],
+  "category": "verb",
+  "type": "active",
+  "scope": ["gloss", "definition"]
+}
+```
+
+If `scope` is omitted, v0.1 treats the rule as applicable in all current verb
+normalization contexts. This preserves compatibility with older rule files.
+
 Invalid rule files should fail loudly. Silent rule loading errors would make the
 normalization output misleading.
 
@@ -131,7 +146,15 @@ The engine emits three report surfaces.
 ```
 
 `review-candidates.json` records unrecognized verb-like phrases that remain in
-the text and may need new rules.
+the text and may need new rules. Each candidate includes a classifier:
+
+- `simple-infinitive`: `да + verb` or `да се + verb`;
+- `passive`: `да бъде/бъда + participle-like form`;
+- `complex-phrase`: `да + verb + object/complement`.
+
+Complex phrase candidates are never auto-normalized without explicit rules.
+They are reported for editorial review because the complement may be part of a
+sentence, quotation, or explanatory prose.
 
 `report.md` summarizes the run in a human-readable format, including the input,
 output, number of changed paragraphs, number of changes, and number of review

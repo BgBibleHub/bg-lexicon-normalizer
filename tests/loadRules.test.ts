@@ -64,7 +64,8 @@ describe("loadAllRules", () => {
           ...rule("загивам", ["да загине"], "verb", "active"),
           status: "approved",
           sources: ["manual-review"],
-          schemaVersion: 1
+          schemaVersion: 1,
+          scope: ["gloss", "definition"]
         }
       ],
       "passive-verbs.json": [rule("унищожен съм", ["да бъде унищожен"], "verb", "passive")],
@@ -81,7 +82,8 @@ describe("loadAllRules", () => {
         canonical: "загивам",
         status: "approved",
         sources: ["manual-review"],
-        schemaVersion: 1
+        schemaVersion: 1,
+        scope: ["gloss", "definition"]
       })
     );
     expect(loaded.terminologyRules[0]).toEqual(expect.objectContaining({ canonical: "завет" }));

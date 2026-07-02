@@ -40,14 +40,14 @@ export function generateReport(input: ReportInput): string {
     });
   }
 
-  lines.push("", "## Review Candidates", "", "| # | Entry | Section | Candidate | Reason |", "|---:|---|---|---|---|");
+  lines.push("", "## Review Candidates", "", "| # | Entry | Section | Type | Frequency | Candidate | Reason |", "|---:|---|---|---|---:|---|---|");
 
   if (input.reviewCandidates.length === 0) {
-    lines.push("| - | - | - | No candidates | - |");
+    lines.push("| - | - | - | - | - | No candidates | - |");
   } else {
     input.reviewCandidates.forEach((candidate, index) => {
       lines.push(
-        `| ${index + 1} | ${cell(candidate.entryId)} | ${cell(candidate.section)} | ${cell(candidate.candidate)} | ${cell(candidate.reason)} |`
+        `| ${index + 1} | ${cell(candidate.entryId)} | ${cell(candidate.section)} | ${cell(candidate.classifierType)} | ${cell(candidate.frequency)} | ${cell(candidate.candidate)} | ${cell(candidate.reason)} |`
       );
     });
   }

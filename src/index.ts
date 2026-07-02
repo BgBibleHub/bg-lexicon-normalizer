@@ -4,6 +4,16 @@ export { normalizeDefinition } from "./normalizers/normalizeDefinition.js";
 export { normalizeGloss } from "./normalizers/normalizeGloss.js";
 export { normalizeTerminology } from "./normalizers/normalizeTerminology.js";
 export { createVerbNormalizer, findVerbReviewCandidates, normalizeVerb } from "./normalizers/normalizeVerb.js";
+export {
+  detectSourceProfile,
+  getSourceProfile,
+  parseSourceProfileName,
+  parseSourceProfileOptionName,
+  resolveSourceProfile,
+  SOURCE_PROFILES
+} from "./profiles/sourceProfile.js";
+export { lehInlineProfile } from "./profiles/lehInlineProfile.js";
+export { stepMinimalProfile } from "./profiles/stepMinimalProfile.js";
 export { generateReport } from "./reports/generateReport.js";
 export { ALL_RULE_FILES, loadAllRules, loadVerbRules, RuleValidationError, VERB_RULE_FILES } from "./rules/loadRules.js";
 export type {
@@ -18,3 +28,4 @@ export type {
   VerbRuleType
 } from "./rules/types.js";
 export type { VerbNormalizer } from "./normalizers/normalizeVerb.js";
+export type { ProfileNormalizers, SourceProfile, SourceProfileName, SourceProfileOptionName } from "./profiles/sourceProfile.js";

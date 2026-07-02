@@ -1,9 +1,10 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
-import type { LoadedRules, NormalizationRule, RuleValidationIssue } from "./types.js";
+import type { LoadedRules, NormalizationRule, RuleScope, RuleValidationIssue } from "./types.js";
 
 export const VERB_RULE_FILES = ["verbs.json", "passive-verbs.json", "reflexive-verbs.json"] as const;
 const VERB_RULE_TYPES = ["active", "reflexive", "passive"] as const;
+const RULE_SCOPES = ["gloss", "definition", "lexical"] as const;
 export const ALL_RULE_FILES = [
   ...VERB_RULE_FILES,
   "terminology.json",
@@ -134,6 +135,23 @@ function validateRule(
     issues.push({ filePath, index, field: "schemaVersion", message: "must be a string or number when present" });
   }
 
+  if (rule.scope !== undefined) {
+    if (!Array.isArray(rule.scope)) {
+      issues.push({ filePath, index, field: "scope", message: "must be an array when present" });
+    } else {
+      rule.scope.forEach((scope, scopeIndex) => {
+        if (typeof scope !== "string" || !RULE_SCOPES.includes(scope as (typeof RULE_SCOPES)[number])) {
+          issues.push({
+            filePath,
+            index,
+            field: `scope[${scopeIndex}]`,
+            message: "must be one of: gloss, definition, lexical"
+          });
+        }
+      });
+    }
+  }
+
   if (
     typeof rule.canonical !== "string" ||
     rule.canonical.trim() === "" ||
@@ -148,7 +166,8 @@ function validateRule(
     (rule.notes !== undefined && typeof rule.notes !== "string") ||
     (rule.status !== undefined && typeof rule.status !== "string") ||
     (rule.sources !== undefined && (!Array.isArray(rule.sources) || rule.sources.some((source) => typeof source !== "string" || source.trim() === ""))) ||
-    (rule.schemaVersion !== undefined && typeof rule.schemaVersion !== "string" && typeof rule.schemaVersion !== "number")
+    (rule.schemaVersion !== undefined && typeof rule.schemaVersion !== "string" && typeof rule.schemaVersion !== "number") ||
+    (rule.scope !== undefined && (!Array.isArray(rule.scope) || rule.scope.some((scope) => typeof scope !== "string" || !RULE_SCOPES.includes(scope as (typeof RULE_SCOPES)[number]))))
   ) {
     return undefined;
   }
@@ -163,7 +182,8 @@ function validateRule(
     status: typeof rule.status === "string" ? rule.status.trim() : undefined,
     sources: Array.isArray(rule.sources) ? rule.sources.map((source) => String(source).trim()) : undefined,
     schemaVersion:
-      typeof rule.schemaVersion === "string" || typeof rule.schemaVersion === "number" ? rule.schemaVersion : undefined
+      typeof rule.schemaVersion === "string" || typeof rule.schemaVersion === "number" ? rule.schemaVersion : undefined,
+    scope: Array.isArray(rule.scope) ? rule.scope.map((scope) => scope as RuleScope) : undefined
   };
 }
 

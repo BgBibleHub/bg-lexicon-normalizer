@@ -145,8 +145,30 @@ describe("normalizeVerb", () => {
 
     expect(result.text).toBe(input);
     expect(result.reviewCandidates).toEqual([
-      expect.objectContaining({ candidate: "да прославиш Бога" })
+      expect.objectContaining({ candidate: "да прославиш Бога", classifierType: "complex-phrase" })
     ]);
+  });
+
+  it("classifies simple, passive, and complex unknown candidates", () => {
+    const result = normalizeVerb("да летя; да бъде готов; да прославиш Бога", sampleRules);
+
+    expect(result.reviewCandidates.map((candidate) => [candidate.candidate, candidate.classifierType])).toEqual([
+      ["да летя", "simple-infinitive"],
+      ["да бъде готов", "passive"],
+      ["да прославиш Бога", "complex-phrase"]
+    ]);
+  });
+
+  it("applies scoped rules only in matching contexts", () => {
+    const rules: NormalizationRule[] = [
+      { ...rule("летя", ["да летя"], "active"), scope: ["gloss"] }
+    ];
+
+    expect(normalizeVerb("да летя", rules, { source: "gloss" }).text).toBe("летя");
+    expect(normalizeVerb("да летя", rules, { source: "definition" }).text).toBe("да летя");
+    expect(normalizeVerb("да летя", rules, { source: "definition" }).reviewCandidates[0]).toEqual(
+      expect.objectContaining({ candidate: "да летя", classifierType: "simple-infinitive" })
+    );
   });
 
   it("does not report candidates that begin with a known pattern", () => {

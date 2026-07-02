@@ -36,6 +36,18 @@ Use a custom output directory:
 npm run normalize -- input.docx --out-dir normalized-output
 ```
 
+Choose a source profile explicitly:
+
+```bash
+npm run normalize -- input.docx --profile auto
+npm run normalize -- input.docx --profile step-minimal
+npm run normalize -- input.docx --profile leh-inline
+```
+
+If `--profile` is omitted, v0.1 uses `auto`: it defaults to `step-minimal` when
+`@@...:G@@` or `@@...:D@@` markers are present and auto-detects `leh-inline` for
+Greek lemma lines that contain ` – `.
+
 ## What v0.1 Does
 
 - Reads `word/document.xml` from a DOCX file.

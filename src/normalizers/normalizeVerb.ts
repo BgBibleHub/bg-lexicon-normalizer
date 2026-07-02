@@ -3,6 +3,7 @@ import type {
   NormalizationContext,
   NormalizationResult,
   NormalizationRule,
+  RuleScope,
   ReviewCandidate
 } from "../rules/types.js";
 
@@ -63,7 +64,7 @@ function normalizeWithCompiledPatterns(
     };
   }
 
-  const pendingChanges = findPendingChanges(input, compiledPatterns);
+  const pendingChanges = findPendingChanges(input, compiledPatterns, context);
   const text = applyPendingChanges(input, pendingChanges);
   const changes = pendingChanges.map((pending) => toChangeRecord(pending, context, input, text));
 
@@ -80,7 +81,9 @@ export function findVerbReviewCandidates(
   context: NormalizationContext = {}
 ): ReviewCandidate[] {
   const knownPatterns = new Set(
-    rules.flatMap((rule) => rule.patterns.map((pattern) => normalizeKey(pattern)))
+    rules
+      .filter((rule) => ruleAppliesToContext(rule, context))
+      .flatMap((rule) => rule.patterns.map((pattern) => normalizeKey(pattern)))
   );
   const candidates: ReviewCandidate[] = [];
   const seen = new Set<string>();
@@ -90,6 +93,7 @@ export function findVerbReviewCandidates(
       const rawCandidate = match[2] ?? "";
       const candidate = rawCandidate.trim();
       const key = normalizeKey(candidate);
+      const classifierType = classifyVerbCandidate(candidate);
 
       if (!candidate || !CYRILLIC_REGEX.test(candidate) || isKnownPatternPrefix(key, knownPatterns) || seen.has(key)) {
         continue;
@@ -100,6 +104,7 @@ export function findVerbReviewCandidates(
       candidates.push({
         ...context,
         candidate,
+        classifierType,
         reason: "unrecognized Bulgarian verb-like phrase beginning with 'да'",
         offset: chunkOffset + localOffset,
         context: makeContext(input, chunkOffset + localOffset, candidate.length)
@@ -112,10 +117,14 @@ export function findVerbReviewCandidates(
   return candidates;
 }
 
-function findPendingChanges(input: string, compiledPatterns: CompiledPattern[]): PendingChange[] {
+function findPendingChanges(input: string, compiledPatterns: CompiledPattern[], context: NormalizationContext): PendingChange[] {
   const selected: PendingChange[] = [];
 
   for (const compiled of compiledPatterns) {
+    if (!ruleAppliesToContext(compiled.rule, context)) {
+      continue;
+    }
+
     replaceOutsideProtectedTokens(input, (chunk, chunkOffset) => {
       for (const match of chunk.matchAll(compiled.regex)) {
         const prefix = match[1] ?? "";
@@ -232,6 +241,48 @@ function isKnownPatternPrefix(candidateKey: string, knownPatterns: Set<string>):
   }
 
   return false;
+}
+
+function ruleAppliesToContext(rule: NormalizationRule, context: NormalizationContext): boolean {
+  if (!rule.scope || rule.scope.length === 0) {
+    return true;
+  }
+
+  const source = contextSource(context);
+  return source ? rule.scope.includes(source) : true;
+}
+
+function contextSource(context: NormalizationContext): RuleScope | undefined {
+  if (context.source === "gloss" || context.source === "definition" || context.source === "lexical") {
+    return context.source;
+  }
+
+  return sectionSource(context.section);
+}
+
+function sectionSource(section: string | undefined): RuleScope | undefined {
+  if (section === "G") {
+    return "gloss";
+  }
+
+  if (section === "D") {
+    return "definition";
+  }
+
+  return undefined;
+}
+
+function classifyVerbCandidate(candidate: string): ReviewCandidate["classifierType"] {
+  const key = normalizeKey(candidate);
+  if (/^да\s+(?:бъде|бъда)\s+\p{Script=Cyrillic}+$/u.test(key)) {
+    return "passive";
+  }
+
+  if (/^да\s+се\s+\p{Script=Cyrillic}+$/u.test(key) || /^да\s+\p{Script=Cyrillic}+$/u.test(key)) {
+    return "simple-infinitive";
+  }
+
+  return "complex-phrase";
 }
 
 function applyInitialCapital(canonical: string, matched: string): string {
